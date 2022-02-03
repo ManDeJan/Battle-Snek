@@ -1,0 +1,15 @@
+{
+    "cmake.generator": "Unix Makefiles",
+    "cmake.configureEnvironment": {
+        "CC": "/bin/clang",
+        "CXX": "/bin/clang++"
+    },
+	"cmake.configureOnOpen": true,
+
+    "C_Cpp.intelliSenseEngine": "Disabled",
+
+	"clangd.checkUpdates": true,
+    "clangd.arguments": [
+
+    ]
+}
