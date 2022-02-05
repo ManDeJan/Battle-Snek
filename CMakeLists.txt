@@ -9,7 +9,7 @@ add_executable(snek-server ${sources})
 
 # compile options
 target_compile_options(snek-server PUBLIC
-  -march=native -mtune=native -Ofast -std=c++2b
+  -march=native -mtune=native -std=c++2b
   -Wall -Wextra -Wpedantic)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 

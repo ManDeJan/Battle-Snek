@@ -1,0 +1,115 @@
+{
+    "game": {
+        "id": "00b437a1-66a3-4586-9e7a-4a058ea48cb7",
+        "ruleset": {
+            "name": "solo",
+            "version": "v1.0.25",
+            "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 0,
+                "royale": {
+                    "shrinkEveryNTurns": 0
+                },
+                "squad": {
+                    "allowBodyCollisions": false,
+                    "sharedElimination": false,
+                    "sharedHealth": false,
+                    "sharedLength": false
+                }
+            }
+        },
+        "timeout": 500,
+        "source": "custom"
+    },
+    "turn": 6,
+    "board": {
+        "height": 11,
+        "width": 11,
+        "snakes": [
+            {
+                "id": "gs_XHdDyycK9GjtbHGwXG4q96GX",
+                "name": "Snek",
+                "latency": "5",
+                "health": 98,
+                "body": [
+                    {
+                        "x": 5,
+                        "y": 7
+                    },
+                    {
+                        "x": 5,
+                        "y": 6
+                    },
+                    {
+                        "x": 5,
+                        "y": 5
+                    },
+                    {
+                        "x": 5,
+                        "y": 4
+                    }
+                ],
+                "head": {
+                    "x": 5,
+                    "y": 7
+                },
+                "length": 4,
+                "shout": "",
+                "squad": "",
+                "customizations": {
+                    "color": "#ff2169",
+                    "head": "default",
+                    "tail": "default"
+                }
+            }
+        ],
+        "food": [
+            {
+                "x": 6,
+                "y": 0
+            },
+            {
+                "x": 4,
+                "y": 7
+            }
+        ],
+        "hazards": []
+    },
+    "you": {
+        "id": "gs_XHdDyycK9GjtbHGwXG4q96GX",
+        "name": "Snek",
+        "latency": "5",
+        "health": 98,
+        "body": [
+            {
+                "x": 5,
+                "y": 7
+            },
+            {
+                "x": 5,
+                "y": 6
+            },
+            {
+                "x": 5,
+                "y": 5
+            },
+            {
+                "x": 5,
+                "y": 4
+            }
+        ],
+        "head": {
+            "x": 5,
+            "y": 7
+        },
+        "length": 4,
+        "shout": "",
+        "squad": "",
+        "customizations": {
+            "color": "#ff2169",
+            "head": "default",
+            "tail": "default"
+        }
+    }
+}

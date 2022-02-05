@@ -4,12 +4,15 @@
         "CC": "/bin/clang",
         "CXX": "/bin/clang++"
     },
-	"cmake.configureOnOpen": true,
+    "cmake.configureOnOpen": true,
 
+    // we don't intellisense here
     "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
 
-	"clangd.checkUpdates": true,
+    "clangd.checkUpdates": true,
     "clangd.arguments": [
-
-    ]
+        "--compile-commands-dir=${workspaceFolder}/build/"
+    ],
 }
