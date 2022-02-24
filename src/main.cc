@@ -7,7 +7,7 @@
 #include "serialization.hh"
 #include "snake_ai.hh"
 
-int main() {
+int main(int argc, char *argv[]) {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([]{
@@ -54,7 +54,9 @@ int main() {
         try {
             CROW_LOG_INFO << fmt::format("Game ID: {}", crow::json::load(req.body)["game"]["id"].s());
             auto turn = deserialize_turn(crow::json::load(req.body));
-            return crow::response(serialize_move(snake_ai::move(turn)));
+            const auto move_json = serialize_move(snake_ai::move(turn));
+            // CROW_LOG_INFO << fmt::format("Request body: {}", move_json.dump());
+            return crow::response(move_json.dump());
         } catch (const std::exception &e) {
             CROW_LOG_ERROR << fmt::format("Exception during deserialization:\n{}\nBody:{}\n", e.what(), req.body);
             return crow::response(crow::status::BAD_REQUEST);
@@ -62,5 +64,10 @@ int main() {
     });
 
     CROW_LOG_INFO << fmt::format("Battle Snek ready for action!\n\n");
-    app.bindaddr("127.0.0.1").port(31337).run();
+    u16 port = 3000;
+    // if port in argv use that
+    if (argc > 1) {
+        port = std::stoi(argv[1]);
+    }
+    app.bindaddr("127.0.0.1").port(port).run();
 }

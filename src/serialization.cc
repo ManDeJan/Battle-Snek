@@ -100,7 +100,7 @@ Customizations deserialize_customizations(const crow::json::rvalue& customizatio
 
 crow::json::wvalue serialize_move(const Move &move) {
     crow::json::wvalue move_json;
-    move_json["direction"] = array{"up", "down", "left", "right"}[static_cast<u8>(move.direction)];
+    move_json["move"] = array{"up", "right", "down", "left"}[static_cast<u8>(move.direction)];
     move_json["shout"] = move.shout;
     return move_json;
 }

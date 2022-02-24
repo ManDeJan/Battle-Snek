@@ -76,9 +76,9 @@ struct Turn {
 
 enum class Direction : u8 {
     Up,
+    Right,
     Down,
     Left,
-    Right,
 };
 
 struct Move {
